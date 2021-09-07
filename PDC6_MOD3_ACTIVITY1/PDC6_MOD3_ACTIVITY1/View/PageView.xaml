@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC6_MOD3_ACTIVITY1.View.PageView">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                    <Label Text="DISPLAY STUDENT INFORMATION" HorizontalTextAlignment="Center" TextColor="White" FontSize="30" FontAttributes="Bold"/>
+                </Frame>
+
+                <AbsoluteLayout Margin="0, 25, 0, 0">
+                    <Label Text="ID"
+                           Margin="15, 0, 0, 0"
+                           FontAttributes="bold"
+                           TextColor="Black"></Label>
+                    <Entry Text="{Binding IDEntry}"
+                           Margin="12, 0, 0, 0"
+                           AbsoluteLayout.LayoutBounds="0, 15, 0.5, 40"
+                           AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="12"
+                           TextColor="Black"/>
+
+                    <Label Text="Name"
+                           Margin="209, 0, 0, 0"
+                           FontAttributes="bold"
+                           TextColor="Black"></Label>
+                    <Entry Text="{Binding NameEntry}"
+                           Margin="0, 0, 15, 0"
+                           AbsoluteLayout.LayoutBounds="1,15, 0.5, 40"
+                           AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="12"
+                           TextColor="Black"/>
+
+                    <Label Text="Course Code"
+                           Margin="15,70, 0, 0"
+                           FontAttributes="bold"
+                           TextColor="Black"></Label>
+                    <Entry Text="{Binding CourseCodeEntry}"
+                           Margin="12, 0, 0, 0"
+                           AbsoluteLayout.LayoutBounds="0, 80, 0.5, 40"
+                           AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="12"
+                           TextColor="Black"/>
+
+                    <Label Text="Course Title"
+                           Margin="209,70, 0, 0"
+                           FontAttributes="bold"
+                           TextColor="Black"></Label>
+                    <Entry Text="{Binding CourseTitleEntry}"
+                           Margin="0, 0, 15, 0"
+                           AbsoluteLayout.LayoutBounds="1, 80, 0.5, 40"
+                           AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="12"
+                           TextColor="Black"/>
+
+                    <Label Text="Number of Units"
+                           Margin="15,140, 0, 0"
+                           FontAttributes="bold"
+                           TextColor="Black"></Label>
+                    <Entry Text="{Binding NumberOfUnitsEntry}"
+                           Margin="12, 0, 0, 0"
+                           AbsoluteLayout.LayoutBounds="0, 150, 0.5, 40"
+                           AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="12"
+                           TextColor="Black"/>
+                    
+                    <Label Text="Date of Attendance"
+                           Margin="209,140, 0, 0"
+                           FontAttributes="bold"
+                           TextColor="Black"></Label>
+                    <Entry Text="{Binding DateOfAttendanceEntry}"
+                           Margin="0, 0, 15, 0"
+                           AbsoluteLayout.LayoutBounds="1, 150, 0.5, 40"
+                           AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="12"
+                           TextColor="Black"/>
+                </AbsoluteLayout>
+
+                <AbsoluteLayout>
+                    <Button Margin="100, 25, 0, 0"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            HorizontalOptions="Center"
+                            WidthRequest="100"
+                            HeightRequest="35"
+                            CornerRadius="10"
+                            BackgroundColor="White"
+                            Command="{Binding SubmitEntry}"
+                            Text="Display">
+                            <Button.Background>
+                            <LinearGradientBrush EndPoint="1,0">
+                                <GradientStop 
+                                    Color="#33b574" 
+                                    Offset="0.1" />
+                                <GradientStop 
+                                    Color="#33b574" 
+                                    Offset="1.0" />
+                            </LinearGradientBrush>
+                            </Button.Background>
+                    </Button>
+                    <Button Margin="205, 25, 0, 0"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            HorizontalOptions="Center"
+                            WidthRequest="100"
+                            HeightRequest="35"
+                            CornerRadius="10"
+                            BackgroundColor="White"
+                            Command="{Binding ClearEntry}"
+                            Text="Clear">
+                            <Button.Background>
+                            <LinearGradientBrush EndPoint="1,0">
+                                <GradientStop
+                                    Color="#b33b34"
+                                    Offset="0.1" />
+                                <GradientStop
+                                    Color="#b33b34"
+                                    Offset="1.0" />
+                            </LinearGradientBrush>
+                            </Button.Background>
+                    </Button>
+                </AbsoluteLayout>
+
+
+                <AbsoluteLayout Margin="0, 20, 0, 0">
+                    <Label Text="ID"
+                           Margin="181, 10, 0, 0" 
+                           FontAttributes="Bold" 
+                           TextColor="Black"/>
+                    <Label Text="{Binding IDDisplay}" 
+                           Margin="205, 10, 0, 0" 
+                           TextColor="Black"/>
+
+                    <Label Text="Name" 
+                           Margin="157, 30, 0, 0" 
+                           FontAttributes="Bold" 
+                           TextColor="Black"/>
+                    <Label Text="{Binding NameDisplay}" 
+                           Margin="205, 30, 0, 0" 
+                           TextColor="Black"/>
+
+                    <Label Text="Course Code" 
+                           Margin="115, 50, 0, 0" 
+                           FontAttributes="Bold" 
+                           TextColor="Black"/>
+                    <Label Text="{Binding CourseCodeDisplay}" 
+                           Margin="205, 50, 0, 0" 
+                           TextColor="Black"/>
+
+                    <Label Text="Course Title" 
+                           Margin="120, 70, 0, 0"  
+                           FontAttributes="Bold" 
+                           TextColor="Black"/>
+                    <Label Text="{Binding CourseTitleDisplay}" 
+                           Margin="205, 70, 0, 0" 
+                           TextColor="Black"/>
+
+                    <Label Text="Number of Units"
+                           Margin="93, 90, 0, 0" 
+                           FontAttributes="Bold" 
+                           TextColor="Black"/>
+                    <Label Text="{Binding NumberOfUnitsDisplay}" 
+                           Margin="205, 90, 0, 0" 
+                           TextColor="Black"/>
+
+                    <Label Margin="75, 110, 0, 0" 
+                           Text="Date of Attendance" 
+                           FontAttributes="Bold" 
+                           TextColor="Black"/>
+                    <Label Text="{Binding DateOfAttendanceDisplay}" 
+                           Margin="205, 110, 0, 0" 
+                           TextColor="Black"/>
+                </AbsoluteLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
